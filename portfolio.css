@@ -1,0 +1,550 @@
+  /* Reset default styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styles */
+body {
+    background: #1a1a1a;
+    /* Fallback background if video fails */
+    color: #ecf0f1;
+    /* Light gray text color */
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+    background-image: url(https://img.freepik.com/free-vector/vector-damask-seamless-pattern-background-classical-luxury-old-fashioned-damask-ornament-royal-victorian-seamless-texture-wallpapers-textile-wrapping-exquisite-floral-baroque-template_1217-738.jpg?ga=GA1.1.247335923.1737204200&semt=ais_hybrid);
+    background-repeat: none;
+    background-size:cover;
+}
+
+/* Background video for entire page */
+#background-video {
+    position: fixed;
+    /* Fixed position to cover whole page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure video fills the area */
+    z-index: -1;
+    /* Place behind all content */
+    filter: brightness(0.5);
+    /* Darken video for text readability */
+}
+
+/* Navbar styles */
+header {
+    padding: 15px 20px;
+    /* Padding around navbar */
+    position: fixed;
+    /* Sticky at top */
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    /* Ensure it stays above content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    /* Shadow for depth */
+    /* backdrop-filter: blur(5px); */
+    /* Glassmorphism effect */
+    transform: translateZ(10px);
+    /* 3D lift effect */
+}
+
+/* Container for logo and nav */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    /* Space logo and nav */
+    align-items: center;
+    max-width: 1200px;
+    /* Max width for centering */
+    margin: 0 auto;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 1.5em;
+    color: #3498db;
+    /* Blue color for logo */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Smooth color change */
+}
+
+.logo:hover {
+    color: #e74c3c;
+    /* Red on hover */
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    /* Hidden on desktop */
+    font-size: 1.8em;
+    color: #3498db;
+    /* Blue color */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions */
+}
+
+.hamburger:hover {
+    color: #e74c3c;
+    /* Red on hover */
+    transform: rotate(90deg);
+    /* Rotate on hover */
+}
+
+/* Navigation links */
+nav {
+    display: flex;
+    gap: 20px;
+    /* Space between links */
+}
+
+nav a {
+    color: #3498db;
+    /* Blue color for links */
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    /* Padding for clickable area */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    /* Smooth transitions */
+    transform: perspective(500px) rotateX(0deg);
+    /* 3D effect */
+}
+
+nav a:hover {
+    color: #ecf0f1;
+    /* Light gray on hover */
+    background: #e74c3c;
+    /* Red background on hover */
+    transform: perspective(500px) rotateX(10deg);
+    /* 3D flip on hover */
+}
+
+/* Hero section */
+.hero {
+    min-height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    text-align: center;
+    padding: 60px 20px;
+    /* Padding around content */
+}
+
+.hero img {
+    border-radius: 50%;
+    /* Circular image */
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 5px solid #3498db;
+    /* Blue border */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    /* Smooth transitions */
+    transform: perspective(1000px) rotateY(0deg);
+    /* 3D effect */
+}
+
+.hero img:hover {
+    transform: perspective(1000px) rotateY(15deg) scale(1.2);
+    /* 3D spin and scale */
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+    /* Blue glow */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #3498db;
+    /* Blue heading */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    /* Shadow for contrast */
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #ecf0f1;
+    /* Light gray text */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    /* Shadow for contrast */
+    margin-bottom: 20px;
+    /* Space before buttons */
+}
+
+/* Resume buttons container */
+.resume-buttons {
+    display: flex;
+    gap: 15px;
+    /* Space between buttons */
+}
+
+/* General button styles for resume */
+.resume-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    /* Shadow for contrast */
+}
+
+/* Download resume button */
+.download-resume {
+    background: #3498db;
+    /* Blue background */
+    color: #ecf0f1;
+    /* Light gray text */
+}
+
+.download-resume:hover {
+    background: #e74c3c;
+    /* Red on hover */
+    transform: scale(1.1);
+    /* Scale up on hover */
+}
+
+/* View resume button */
+.view-resume {
+    background: #3498db;
+    /* Blue background */
+    color: #ecf0f1;
+    /* Light gray text */
+}
+
+.view-resume:hover {
+    background: #e74c3c;
+    /* Red on hover */
+    transform: scale(1.1);
+    /* Scale up on hover */
+}
+
+/* General section styles */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    /* Center content */
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    transform: perspective(1000px) rotateX(2deg);
+    /* 3D tilt */
+    transition: transform 0.5s ease;
+    /* Smooth transition */
+}
+
+section:hover {
+    transform: perspective(1000px) rotateX(0deg);
+    /* Flatten on hover */
+}
+
+section h2 {
+    font-size: 2em;
+    color: #3498db;
+    /* Blue heading */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    /* Blue underline */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Shadow for contrast */
+}
+
+/* Timeline items */
+.timeline-item {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
+    transform: perspective(1000px) rotateY(0deg);
+    /* 3D effect */
+}
+
+.timeline-item:hover {
+    transform: perspective(1000px) rotateY(5deg) scale(1.02);
+    /* 3D tilt and scale */
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+    /* Blue glow */
+}
+
+.timeline-item h3 {
+    color: #3498db;
+    /* Blue heading */
+    margin-bottom: 10px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    /* Shadow for contrast */
+}
+
+.timeline-item p {
+    color: #ecf0f1;
+    /* Light gray text */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    /* Shadow for contrast */
+}
+
+/* Skills section */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wrap items on small screens */
+    gap: 20px;
+    /* Space between skills */
+}
+
+.skill {
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1 1 30%;
+    /* Flexible width */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
+    transform: perspective(1000px) rotateX(0deg);
+    /* 3D effect */
+}
+
+.skill:hover {
+    transform: perspective(1000px) rotateX(10deg) scale(1.1);
+    /* 3D flip and scale */
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+    /* Blue glow */
+    border: 2px solid yellow;
+}
+
+.skill i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #3498db;
+    /* Blue icon */
+}
+
+.skill p {
+    color: #ecf0f1;
+    /* Light gray text */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    /* Shadow for contrast */
+}
+
+/* Projects section */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsive grid */
+    gap: 20px;
+    /* Space between projects */
+}
+
+.project {
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
+    transform: perspective(1000px) rotateY(0deg);
+    /* 3D effect */
+}
+
+.project:hover {
+    transform: perspective(1000px) rotateY(5deg) scale(1.05);
+    /* 3D tilt and scale */
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+    /* Blue glow */
+    border: 2px solid rgba(125, 61, 198, 0.792);
+}
+
+.project h3 {
+    color: #3498db;
+    /* Blue heading */
+    margin-bottom: 10px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    /* Shadow for contrast */
+}
+
+.project p {
+    color: #ecf0f1;
+    /* Light gray text */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    /* Shadow for contrast */
+}
+
+.project a {
+    color: #3498db;
+    /* Blue link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* Smooth color change */
+}
+
+.project a:hover {
+    color: #e74c3c;
+    /* Red on hover */
+}
+
+.certificate{
+    color:#3498db;
+    text-decoration: none;
+}
+
+.certificate:hover{
+    color:greenyellow;
+}
+
+/* Contact form */
+.contact-form {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 20px auto;
+    transform: perspective(1000px) rotateX(0deg);
+    /* 3D effect */
+    transition: transform 0.5s ease;
+    /* Smooth transition */
+}
+
+.contact-form:hover {
+    transform: perspective(1000px) rotateX(5deg);
+    /* 3D tilt on hover */
+    background: #FF9B17;
+    /* Orange background on hover */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #3498db;
+    /* Blue border */
+    border-radius: 5px;
+    background: rgba(52, 73, 94, 0.7);
+    /* Slight blue tint for inputs */
+    color: #ecf0f1;
+    /* Light gray text */
+}
+
+.contact-form button {
+    background: #3498db;
+    /* Blue button */
+    color: #ecf0f1;
+    /* Light gray text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions */
+}
+
+.contact-form button:hover {
+    background: #e74c3c;
+    /* Red on hover */
+    transform: scale(1.1);
+    /* Scale up on hover */
+}
+
+/* Footer styles */
+footer {
+    padding: 20px;
+    text-align: center;
+    transform: perspective(1000px) rotateX(0deg);
+    /* 3D effect */
+}
+
+footer h2 {
+    color: #3498db;
+    /* Blue heading */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Shadow for contrast */
+}
+
+footer a {
+    color: #3498db;
+    /* Blue icons */
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions */
+}
+
+footer a:hover {
+    color: #e74c3c;
+    /* Red on hover */
+    transform: rotate(10deg);
+    /* Rotate on hover */
+}
+
+footer p {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    /* Shadow for contrast */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        /* Show hamburger on mobile */
+    }
+
+    nav {
+        display: none;
+        /* Hide nav by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #34495e;
+        /* Blue background for mobile menu */
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        /* Shadow for depth */
+    }
+
+    nav.active {
+        display: flex;
+        /* Show nav when active */
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 1.3em;
+        padding: 10px;
+    }
+
+    .skills-list,
+    .project-list {
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
+    }
+
+    .hero img {
+        width: 150px;
+        /* Smaller image on mobile */
+        height: 150px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        /* Smaller heading on mobile */
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+        /* Stack buttons vertically on mobile */
+        gap: 10px;
+        /* Smaller gap on mobile */
+    }
+}
