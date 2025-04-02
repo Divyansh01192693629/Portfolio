@@ -15,9 +15,9 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     /* Prevent horizontal scroll */
-    background-image: url(https://img.freepik.com/free-vector/vector-damask-seamless-pattern-background-classical-luxury-old-fashioned-damask-ornament-royal-victorian-seamless-texture-wallpapers-textile-wrapping-exquisite-floral-baroque-template_1217-738.jpg?ga=GA1.1.247335923.1737204200&semt=ais_hybrid);
+/*     background-image: url(https://img.freepik.com/free-vector/vector-damask-seamless-pattern-background-classical-luxury-old-fashioned-damask-ornament-royal-victorian-seamless-texture-wallpapers-textile-wrapping-exquisite-floral-baroque-template_1217-738.jpg?ga=GA1.1.247335923.1737204200&semt=ais_hybrid);
     background-repeat: none;
-    background-size:cover;
+    background-size:cover; */
 }
 
 /* Background video for entire page */
